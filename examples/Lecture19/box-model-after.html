@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Box Model</title>
+<style>
+	* {
+		/* the * value above is a universal selector: it forces css to apply to all -- this is used because box-sizing is not inheritive element (meaning it doesnt work for whole page even if put on body)*/
+		box-sizing: border-box;
+		/* with box-sizing set to border-box, now entire box frame limited to 300px */
+		margin: 0;
+		padding: 0;
+	}
+
+body {
+  background-color: gray;
+}
+
+#box {
+  background-color: blue;
+  padding: 10px;
+  border: 5px solid black;
+  margin-top: 40px;
+  /*this margin-top value of 40px overrides margin-bottom value of 30px below (since it is bigger)*/
+  width: 300px;
+  height: 50px;
+  overflow: auto;
+  /*auto adds scrollbars, hidden hides all overflowing text*/
+}
+#content {
+  background-color: #90EE90; /*green*/
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Box Model</h1>
+
+<div id="box">
+  <div id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </div>
+</div>
+
+
+</body>
+</html>
