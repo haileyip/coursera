@@ -9,6 +9,6 @@
 	<p>git status</p>
 	<p>git add *</p>
 	<p>git commit -m "message"</p>
-	<p>browser-sync start --server --directory --files "*"</p>
+	<p>browser-sync start --server --directory --files "**/*"</p>
 </body>
 </html>
