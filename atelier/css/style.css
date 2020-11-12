@@ -1,0 +1,290 @@
+@font-face {
+      font-family: "Microsoft Jhenghei Light";
+      src: url('fonts/msjhl.ttf') format('truetype');
+}
+
+@font-face {
+      font-family: "Candara Light";
+      src: url('fonts/Candaral.ttf') format('truetype');
+}
+
+html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+}
+
+body {
+      font-family: "Candara Light",sans-serif;
+      font-weight: lighter;
+      background: #000000;
+      background: -webkit-linear-gradient(to right, #696969, #000000);
+      background: linear-gradient(to right, #696969, #000000); 
+      background-size: cover;
+      /* new code */
+      overflow: hidden;
+      margin: 0;
+      text-rendering: optimizeLegibility;
+}
+
+
+header {
+      width: 100%;
+      height: 10vh;
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+      text-decoration: none;
+      color: rgba(255,255,255,0.5);
+}
+
+
+.logo {
+      line-height: 60px;
+      position: fixed;
+      float: left;
+      margin: 16px 46px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 2px;
+}
+
+nav {
+      position: fixed;
+      width: 100%;
+      line-height: 60px;
+}
+
+nav ul {
+      line-height: 60px;
+      list-style: none;
+      background: rgba(0, 0, 0, 0);
+      overflow: hidden;
+      color: #fff;
+      padding: 0;
+      text-align: right;
+      margin: 0;
+      padding-right: 40px;
+      transition: 1s;
+}
+
+nav.black ul {
+      background: #000;
+}
+
+nav ul li {
+      display: inline-block;
+      padding: 16px 40px;
+}
+
+nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+}
+
+.menu {
+      text-decoration: none;
+}
+
+.menu-icon {
+      line-height: 60px;
+      width: 100%;
+      background: #000;
+      text-align: right;
+      box-sizing: border-box;
+      padding: 15px 24px;
+      cursor: pointer;
+      color: #fff;
+      display: none;
+}
+
+.jp {
+font-family: 'Microsoft Jhenghei';
+font-weight: lighter;
+color: rgba(191,191,191,1);
+
+}
+
+/* scroll transition animation */
+
+
+h2 {
+  font-size: 3rem;
+  color: rgba(242,242,242,1);
+  margin-bottom: 80px;
+}
+
+h4 {
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+}
+
+section {
+    clear: both;  
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+  
+  .container {
+    padding: 5%;
+    opacity: 0;
+    transition: opacity .8s ease;
+  } 
+}
+
+
+footer {
+    clear: both;  
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+  .container {
+    padding: 5%;
+    opacity: 0;
+    transition: opacity .8s ease;
+  }
+}
+
+.active .container { 
+  opacity: 1;
+  margin-top: 120px;
+}
+
+
+section:nth-child(2) {
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #696969, #000000);
+  background: linear-gradient(to right, #696969, #000000); 
+}
+
+section:nth-child(3) {
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #696969, #000000);
+  background: linear-gradient(to right, #696969, #000000); 
+}
+
+section:nth-child(4) {
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #696969, #000000);
+  background: linear-gradient(to right, #696969, #000000); 
+}
+
+section:nth-child(5) {
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #696969, #000000);
+  background: linear-gradient(to right, #696969, #000000); 
+}
+
+footer {
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #696969, #000000);
+  background: linear-gradient(to right, #696969, #000000); 
+}
+
+.mouse {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  cursor: ns-resize;
+  transform: translateX(-50%);
+  
+  &-shape{
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 65px;
+    margin: 0 auto 15px;
+    border: 3px solid #FFF;
+    border-radius: 22px;
+    
+    .mouse-animation {
+      position: absolute;
+      display: block;
+      top: 25%;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      background: #FFF;
+      border-radius: 50%;
+      transform: translate(-50%, -25%);
+      animation: ball-scroll 0.7s linear infinite;
+    }
+  }
+  
+  .mouse-msg {
+    font-size: .8rem;
+  }
+}
+
+@keyframes ball-scroll {
+  0% {
+    opacity: 1;
+    top: 25%;
+  }
+  20% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 75%;
+  }
+  100% {
+    opacity: 0;
+    top: 25%;
+  }
+}
+
+
+
+
+@media(max-width: 786px, max-width: 1159px) {
+
+      .logo {
+            position: fixed;
+            top: 0;
+            margin-top: 16px;
+      }
+
+      nav ul {
+            max-height: 0px;
+            background: #000;
+      }
+
+      nav.black ul {
+            background: #000;
+      }
+
+      .showing {
+            max-height: 34em;
+      }
+
+      nav ul li {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 24px;
+            text-align: center;
+      }
+
+      .menu-icon {
+            display: block;
+      }
+
+}
